@@ -18,17 +18,20 @@ npm install
 npm start
 ```
 # Secciones
-## Personajes 
+## Personajes
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/05b5f960-ea15-460c-a481-bbd32db86721.gif" alt="Demo animado" width="300"/>
+    <img src="./assets/PersonajesCap.png" alt="Demo animado" width="800"/>
+    <img src="assets/PersonajesCap2.png" alt="Demo animado" width="800"/>
 </div>
 
-## Lugares 
+## Lugares
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a4bd92a9-f023-493b-b0b4-ce47ff5e9a9e.gif" alt="Demo animado" width="300"/>
+    <img src="./assets/LugaresCap.png" alt="Demo animado" width="800"/>
+    <img src="assets/LugaresCap2.png" alt="Demo animado" width="800"/>
 </div>
 
-## Episodios 
+## Episodios
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/75bf7f1b-ed03-403e-b577-6d89aa417a43.gif" alt="Demo animado" width="300"/>
+    <img src="./assets/EpisodiosCap.png" alt="Demo animado" width="800"/>
+    <img src="./assets/EpisodiosCap2.png" alt="Demo animado" width="800"/>
 </div>
