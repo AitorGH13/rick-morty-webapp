@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/50509e69-a9dd-4af1-9cdc-1842004c778e" alt="Logo del proyecto" width="300">
+  <img src="https://github.com/user-attachments/assets/50509e69-a9dd-4af1-9cdc-1842004c778e" alt="Logo del proyecto" width="350">
 </div>
 
 # Requisitos
