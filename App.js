@@ -1,12 +1,16 @@
+import React, { Suspense } from 'react';
 import { Platform } from 'react-native';
 
-async function Controlers() {
-  if (Platform.OS === 'web') {
-    const WebControler = (await import('./controlers/webControler')).default;
-    return <WebControler />;
-  } else {
-    return null;
-  }
+const WebControler = React.lazy(() => import('./controlers/webControler'));
+
+function Controlers() {
+  if (Platform.OS !== 'web') return null;
+
+  return (
+    <Suspense fallback={<div>Cargando controlador web…</div>}>
+      <WebControler />
+    </Suspense>
+  );
 }
 
 export default Controlers;
