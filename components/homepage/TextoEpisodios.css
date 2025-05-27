@@ -4,7 +4,7 @@
 
 .texto_header_episodios {
   width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 330;
   font-style: italic;
   font-size: 40px;
@@ -14,7 +14,7 @@
 .description_episodios {
   margin-right: 5rem;
   margin-left: 5rem;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-style: italic;
   font-size: 25px;
@@ -33,14 +33,14 @@ green_word:hover {
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-VariableFont.ttf") format("truetype");
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-Italic-VariableFont.ttf") format("truetype");
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }

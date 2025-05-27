@@ -22,16 +22,16 @@
   word-break: break-word;
   width: 200%;
   color: #00ff00;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 28px;
   line-height: 1.4;
 }
 
 .cursor {
-  content: "";
+  content: '';
   display: inline-block;
   position: relative;
-  background-image: url("/portal-rick-and-morty.gif");
+  background-image: url('/portal-rick-and-morty.gif');
   background-size: cover;
   background-repeat: no-repeat;
   visibility: visible;

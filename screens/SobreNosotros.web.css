@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("/fondo_main_blur.jpg");
+  background-image: url('/fondo_main_blur.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,14 +13,14 @@
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: italic;
   position: relative;
   color: #8dff85;
 }
 
 .title_about::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -40,7 +40,7 @@
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #8dff85;
 }
 
@@ -48,7 +48,7 @@
   font-size: 20px;
   font-weight: 200;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
 }
 

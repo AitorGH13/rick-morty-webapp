@@ -3,7 +3,7 @@
   position: relative;
   width: 100%; /* ocupa todo el ancho */
   height: 100vh; /* ocupa toda la altura de viewport */
-  background-image: url("/fondo_main_blur.jpg");
+  background-image: url('/fondo_main_blur.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,14 +13,14 @@
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: italic;
   position: relative;
   color: #8dff85;
 }
 
 .title_preguntas_frecuentes::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -37,14 +37,14 @@
 .subtitle_preguntas_frecuentes {
   font-size: 25px;
   font-weight: 400;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
 }
 
 .text_preguntas_frecuentes {
   font-size: 20px;
   font-weight: 200;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
 }
 

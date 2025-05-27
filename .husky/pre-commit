@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+npx prettier --check "**/*.{js,jsx,ts,tsx,css,json,md}"
 npx lint-staged
