@@ -26,9 +26,7 @@
       "build": {
         "babel": {
           "include": ["react-router-dom"],
-          "plugins": [
-            "react-native-web"
-          ]
+          "plugins": ["react-native-web"]
         }
       }
     }

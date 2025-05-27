@@ -1,15 +1,12 @@
-import { Platform,View,Text } from 'react-native';
+import { Platform } from 'react-native';
 
-function Controlers() {
+async function Controlers() {
   if (Platform.OS === 'web') {
-    let WebControler = require('./controlers/webControler').default;
-    return (
-      <WebControler />
-    );
+    const WebControler = (await import('./controlers/webControler')).default;
+    return <WebControler />;
   } else {
-
+    return null;
   }
-  
 }
 
 export default Controlers;

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Episodio from '../../components/episodios/Episodio';
 
 async function fetchAllEpisodes(params = []) {
   let url = 'https://rickandmortyapi.com/api/episode';
   if (params.length) url += `?${params.join('&')}`;
-  const first = await fetch(url).then(r => r.json());
+  const first = await fetch(url).then((r) => r.json());
   let all = first.results || [];
   const pages = first.info?.pages || 1;
 
@@ -12,10 +13,10 @@ async function fetchAllEpisodes(params = []) {
     const promises = [];
     for (let p = 2; p <= pages; p++) {
       const pageUrl = url + (params.length ? `&page=${p}` : `?page=${p}`);
-      promises.push(fetch(pageUrl).then(r => r.json()));
+      promises.push(fetch(pageUrl).then((r) => r.json()));
     }
     const rest = await Promise.all(promises);
-    rest.forEach(d => {
+    rest.forEach((d) => {
       if (d.results) all = all.concat(d.results);
     });
   }
@@ -47,7 +48,8 @@ export default function MostrarEpisodios({ search, season }) {
 
       if (/^S0(E)?$/i.test(rawTerm)) term = '';
 
-      const selSeason = season === 'all' ? null : String(season).padStart(2, '0');
+      const selSeason =
+        season === 'all' ? null : String(season).padStart(2, '0');
 
       const fullExactMatch = term.match(/^S(\d{1,2})E(\d{1,2})$/i);
       const seasonEpisodeZeroMatch = term.match(/^S(\d{1,2})E0$/i);
@@ -55,7 +57,11 @@ export default function MostrarEpisodios({ search, season }) {
       const seasonOnlyMatch = term.match(/^S(\d{1,2})$/i);
       const episodeOnlyMatch = term.match(/^E(\d{1,2})$/i);
 
-      const codeSeasonMatch = fullExactMatch || seasonEpisodeZeroMatch || seasonEPrefixMatch || seasonOnlyMatch;
+      const codeSeasonMatch =
+        fullExactMatch ||
+        seasonEpisodeZeroMatch ||
+        seasonEPrefixMatch ||
+        seasonOnlyMatch;
       if (codeSeasonMatch && selSeason) {
         const sCode = codeSeasonMatch[1].padStart(2, '0');
         if (sCode !== selSeason) {
@@ -82,28 +88,20 @@ export default function MostrarEpisodios({ search, season }) {
           params.push(`episode=S${s}E${e}`);
         }
         handled = true;
-      }
-
-      else if (seasonEpisodeZeroMatch) {
+      } else if (seasonEpisodeZeroMatch) {
         const s = seasonEpisodeZeroMatch[1].padStart(2, '0');
         params.push(`episode=S${s}`);
         needClientFilter = { type: 'episodeCodePrefix', value: `s${s}e0` };
         handled = true;
-      }
-
-      else if (seasonEPrefixMatch) {
+      } else if (seasonEPrefixMatch) {
         const s = seasonEPrefixMatch[1].padStart(2, '0');
         params.push(`episode=S${s}E`);
         handled = true;
-      }
-
-      else if (seasonOnlyMatch) {
+      } else if (seasonOnlyMatch) {
         const s = seasonOnlyMatch[1].padStart(2, '0');
         params.push(`episode=S${s}`);
         handled = true;
-      }
-
-      else if (episodeOnlyMatch) {
+      } else if (episodeOnlyMatch) {
         const eRaw = episodeOnlyMatch[1];
         const eNum = parseInt(eRaw, 10);
         if (eNum === 0) {
@@ -111,13 +109,12 @@ export default function MostrarEpisodios({ search, season }) {
           needClientFilter = { type: 'episodeNumberPrefix', value: eRaw };
         } else {
           if (selSeason) params.push(`episode=S${selSeason}`);
-          else if (eRaw.length > 1) params.push(`episode=E${eRaw.padStart(2, '0')}`);
+          else if (eRaw.length > 1)
+            params.push(`episode=E${eRaw.padStart(2, '0')}`);
           needClientFilter = { type: 'episodeNumberPrefix', value: eRaw };
         }
         handled = true;
-      }
-
-      else if (term) {
+      } else if (term) {
         params.push(`name=${encodeURIComponent(term)}`);
         if (selSeason) params.push(`episode=S${selSeason}`);
         handled = true;
@@ -141,33 +138,35 @@ export default function MostrarEpisodios({ search, season }) {
       if (needClientFilter) {
         if (needClientFilter.type === 'episodeNumberPrefix') {
           const v = needClientFilter.value.padStart(2, '0');
-          list = list.filter(ep => {
+          list = list.filter((ep) => {
             const m = ep.episode.match(/E(\d{2})$/i);
             if (!m) return false;
             return m[1] === v;
           });
         } else if (needClientFilter.type === 'episodeCodePrefix') {
           const prefix = needClientFilter.value.toLowerCase();
-          list = list.filter(ep => ep.episode.toLowerCase().startsWith(prefix));
+          list = list.filter((ep) =>
+            ep.episode.toLowerCase().startsWith(prefix)
+          );
         }
       }
 
       setEpisodios(list);
     })()
-        .catch(err => {
-          console.error('Error cargando episodios:', err);
-          setEpisodios([]);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+      .catch((err) => {
+        console.error('Error cargando episodios:', err);
+        setEpisodios([]);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [search, season]);
 
   if (loading) {
     return (
-        <div className="loading-container">
-          <img src="/portal-rick-and-morty.gif" alt="Cargando" />
-        </div>
+      <div className="loading-container">
+        <img src="/portal-rick-and-morty.gif" alt="Cargando" />
+      </div>
     );
   }
 
@@ -177,17 +176,19 @@ export default function MostrarEpisodios({ search, season }) {
 
   if (!loading && episodios.length === 0 && showNoResults) {
     return (
-        <div className="no-results-container">
-          <p style={{
+      <div className="no-results-container">
+        <p
+          style={{
             color: 'red',
             fontSize: '1.5rem',
             fontWeight: 'bold',
             textAlign: 'center',
-            margin: '2rem 0'
-          }}>
-            No hay resultados para “{search}”.
-          </p>
-        </div>
+            margin: '2rem 0',
+          }}
+        >
+          No hay resultados para “{search}”.
+        </p>
+      </div>
     );
   }
 
@@ -200,53 +201,58 @@ export default function MostrarEpisodios({ search, season }) {
       return acc;
     }, {});
     const temporadas = Object.keys(grupos)
-        .map(n => parseInt(n, 10))
-        .sort((a, b) => a - b);
+      .map((n) => parseInt(n, 10))
+      .sort((a, b) => a - b);
 
     return (
-        <>
-          {temporadas.map(temp => (
-              <section key={temp} className="season-group">
-                <h2 className="season-title">Temporada {temp}</h2>
-                <div className="episodios_container">
-                  <div className="lista_episodios">
-                    {grupos[temp].map(ep => (
-                        <Episodio
-                            key={ep.id}
-                            name={ep.name}
-                            air_date={ep.air_date}
-                            episode={ep.episode}
-                            characters={ep.characters}
-                        />
-                    ))}
-                  </div>
-                </div>
-              </section>
-          ))}
-        </>
-    );
-  }
-
-  return (
-      <section className="season-group">
-        <h2 className="season-title">
-          {search.trim()
-              ? `Resultados${season !== 'all' ? ` - Temp ${season}` : ''}`
-              : `Temporada ${season}`}
-        </h2>
-        <div className="episodios_container">
-          <div className="lista_episodios">
-            {episodios.map(ep => (
-                <Episodio
+      <>
+        {temporadas.map((temp) => (
+          <section key={temp} className="season-group">
+            <h2 className="season-title">Temporada {temp}</h2>
+            <div className="episodios_container">
+              <div className="lista_episodios">
+                {grupos[temp].map((ep) => (
+                  <Episodio
                     key={ep.id}
                     name={ep.name}
                     air_date={ep.air_date}
                     episode={ep.episode}
                     characters={ep.characters}
-                />
-            ))}
-          </div>
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
+      </>
+    );
+  }
+
+  return (
+    <section className="season-group">
+      <h2 className="season-title">
+        {search.trim()
+          ? `Resultados${season !== 'all' ? ` - Temp ${season}` : ''}`
+          : `Temporada ${season}`}
+      </h2>
+      <div className="episodios_container">
+        <div className="lista_episodios">
+          {episodios.map((ep) => (
+            <Episodio
+              key={ep.id}
+              name={ep.name}
+              air_date={ep.air_date}
+              episode={ep.episode}
+              characters={ep.characters}
+            />
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
   );
 }
+
+MostrarEpisodios.propTypes = {
+  search: PropTypes.string.isRequired,
+  season: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};

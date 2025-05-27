@@ -7,7 +7,7 @@
 }
 
 .carta_personaje:hover {
-  transform: scale(1.10);
+  transform: scale(1.1);
   transition-duration: 0.2s;
 }
 

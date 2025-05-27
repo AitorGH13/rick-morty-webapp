@@ -16,31 +16,31 @@ import './webControler.css';
 
 function App() {
   const [openSidebar, setOpenSidebar] = useState(false);
-  const toggleSidebar = () => setOpenSidebar(o => !o);
+  const toggleSidebar = () => setOpenSidebar((o) => !o);
 
   return (
-      <Router>
-        <div style={{ minHeight: '100vh' }}>
-          <div className="header">
-            <MiddelBar toggleSidebar={toggleSidebar} />
-            <Sidebar open={openSidebar} toggleSidebar={toggleSidebar} />
-          </div>
-          <div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-
-              <Route path="/about" element={<SobreNosotros />} />
-              <Route path="/faq"   element={<PreguntasFrecuentes />} />
-
-              <Route path="/lugares" element={<ScreenLugares />} />
-
-              <Route path="/personajes" element={<ScreenPersonajes />} />
-
-              <Route path="/episodios" element={<Episodios />} />
-            </Routes>
-          </div>
+    <Router>
+      <div style={{ minHeight: '100vh' }}>
+        <div className="header">
+          <MiddelBar toggleSidebar={toggleSidebar} />
+          <Sidebar open={openSidebar} toggleSidebar={toggleSidebar} />
         </div>
-      </Router>
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+            <Route path="/about" element={<SobreNosotros />} />
+            <Route path="/faq" element={<PreguntasFrecuentes />} />
+
+            <Route path="/lugares" element={<ScreenLugares />} />
+
+            <Route path="/personajes" element={<ScreenPersonajes />} />
+
+            <Route path="/episodios" element={<Episodios />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
