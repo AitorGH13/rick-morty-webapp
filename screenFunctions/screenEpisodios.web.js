@@ -20,7 +20,8 @@ function ScreenEpisodios() {
           <div className="title_container">
             <h1 className="title_episodios">Episodios</h1>
             <p className="description">
-              En esta sección podrás encontrar información sobre los episodios de la serie.
+              En esta sección podrás encontrar información sobre los episodios
+              de la serie.
             </p>
           </div>
 
@@ -29,7 +30,7 @@ function ScreenEpisodios() {
               type="text"
               placeholder="Buscar episodio..."
               value={search}
-              onChange={e => setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               className="search-input-episodios"
             />
             <select

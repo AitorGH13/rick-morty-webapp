@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './Typewriter.css';
 
 export default function Typewriter({ text = '', speed = 50, delay = 0 }) {
@@ -11,7 +12,7 @@ export default function Typewriter({ text = '', speed = 50, delay = 0 }) {
 
     function tick(idx) {
       if (idx < text.length) {
-        setDisplayed(prev => prev + text[idx]);
+        setDisplayed((prev) => prev + text[idx]);
         setTimeout(() => tick(idx + 1), speed);
       } else {
         setDone(true);
@@ -23,9 +24,8 @@ export default function Typewriter({ text = '', speed = 50, delay = 0 }) {
   }, [text, speed, delay]);
 
   return (
-      <span className="typewriter-wrapper">
-        <span className="typewriter-measure">{text}</span>
-
+    <span className="typewriter-wrapper">
+      <span className="typewriter-measure">{text}</span>
       <span className="typewriter">
         {displayed}
         <span className={`cursor${done ? ' blink' : ''}`} />
@@ -34,4 +34,8 @@ export default function Typewriter({ text = '', speed = 50, delay = 0 }) {
   );
 }
 
-
+Typewriter.propTypes = {
+  text: PropTypes.string,
+  speed: PropTypes.number,
+  delay: PropTypes.number,
+};

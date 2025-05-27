@@ -1,13 +1,16 @@
 {
-  "name": "trabajo-final",
+  "name": "rick-morty-webapp",
   "license": "0BSD",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -23,6 +26,7 @@
     "axios": "^1.8.4",
     "expo": "~52.0.43",
     "expo-status-bar": "~2.0.1",
+    "prop-types": "^15.8.1",
     "react": "18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.16.0",
@@ -36,7 +40,23 @@
     "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@eslint/css": "^0.8.1",
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.32.1"
   },
-  "private": true
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,json,md}": [
+      "prettier --check",
+      "eslint --fix"
+    ]
+  }
 }

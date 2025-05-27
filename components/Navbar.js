@@ -1,5 +1,6 @@
 import React from 'react';
-import { IconButton, InputBase } from '@mui/material';
+import PropTypes from 'prop-types';
+import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Navbar({ toggleSidebar }) {
@@ -8,10 +9,13 @@ function Navbar({ toggleSidebar }) {
       <IconButton color="inherit" onClick={toggleSidebar}>
         <MenuIcon />
       </IconButton>
-      <div className="search-container">
-      </div>
+      <div className="search-container"></div>
     </div>
   );
 }
+
+Navbar.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
+};
 
 export default Navbar;
