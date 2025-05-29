@@ -148,7 +148,7 @@ section[class^='carousel-'] {
   }
   .highlight-container {
     width: 90%; /* ocupa casi todo el ancho en móvil */
-    margin: 5%;
+    margin: 0 5% 15% 5%;
   }
 
   section[class^='carousel-'] {
