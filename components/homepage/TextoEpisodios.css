@@ -1,5 +1,6 @@
 .textoSectionEpisodios {
   text-align: center;
+  width: 100%;
 }
 
 .texto_header_episodios {
@@ -12,8 +13,6 @@
 }
 
 .description_episodios {
-  margin-right: 5rem;
-  margin-left: 5rem;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-style: italic;
@@ -43,4 +42,13 @@ green_word:hover {
   src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .texto_header_episodios {
+    font-size: 1.5rem;
+  }
+  .description_episodios {
+    font-size: 1rem;
+  }
 }

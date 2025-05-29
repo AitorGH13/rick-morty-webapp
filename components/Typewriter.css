@@ -2,15 +2,16 @@
   display: flex;
   position: absolute;
   padding: 0;
-  width: 24%;
-  margin-right: 24%;
-  margin-bottom: 7rem;
+  width: 90%;
+  height: 80%;
+  margin: 0%;
 }
 
 .typewriter-measure {
   visibility: hidden;
   white-space: pre-wrap;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   display: block;
 }
 
@@ -19,8 +20,9 @@
   top: 0;
   left: 0;
   white-space: pre-wrap;
-  word-break: break-word;
-  width: 200%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  width: 100%;
   color: #00ff00;
   font-family: 'Courier New', Courier, monospace;
   font-size: 28px;
@@ -39,4 +41,15 @@
   width: 28px;
   height: 28px;
   margin: 0 0 0 -2px;
+}
+
+/* Móvil ≤480px */
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 1rem;
+  }
+  .cursor {
+    width: 14px;
+    height: 14px;
+  }
 }

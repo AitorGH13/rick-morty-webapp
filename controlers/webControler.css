@@ -19,3 +19,23 @@
   display: flex;
   flex-direction: column;
 }
+
+/* Desktop: ≥769px */
+@media (min-width: 769px) {
+  .navbar {
+    display: none;
+  }
+  .header {
+    display: flex; /* MiddelBar + Sidebar visibles */
+  }
+}
+
+/* Tablet/Móvil: ≤768px */
+@media (max-width: 768px) {
+  .navbar {
+    display: block;
+  }
+  .header {
+    display: none; /* Esconde MiddelBar/Sidebar en móvil */
+  }
+}

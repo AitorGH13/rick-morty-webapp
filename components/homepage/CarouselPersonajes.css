@@ -1,7 +1,5 @@
 .carousel-personajes {
   width: 37%;
-  margin-left: 5%;
-  gap: 1rem;
 }
 
 .carousel-personajes .swiper-wrapper {
@@ -9,7 +7,7 @@
 }
 
 .carousel-personajes .swiper-slide {
-  width: 300px;
+  width: 600px;
   height: 400px;
   border-radius: 10px;
   overflow: hidden;
@@ -27,4 +25,10 @@
 .carousel-personajes .swiper-slide-shadow-left,
 .carousel-personajes .swiper-slide-shadow-right {
   display: none;
+}
+
+@media (max-width: 480px) {
+  .carousel-personajes {
+    width: 70%;
+  }
 }

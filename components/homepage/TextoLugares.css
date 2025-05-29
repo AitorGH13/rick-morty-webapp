@@ -1,5 +1,6 @@
 .textoSectionLugares {
   text-align: center;
+  width: 100%;
 }
 .texto_header_lugares {
   width: 100%;
@@ -39,4 +40,13 @@
   src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .texto_header_lugares {
+    font-size: 1.5rem;
+  }
+  .description_lugares {
+    font-size: 1rem;
+  }
 }

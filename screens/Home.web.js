@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Titulo from '../components/homepage/Titulo';
 import Typewriter from '../components/Typewriter';
-import './Home.css';
+import './Home.web.css';
 
 const CarouselEpisodios = lazy(
   () => import('../components/homepage/CarouselEpisodios')
