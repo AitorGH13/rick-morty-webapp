@@ -11,7 +11,7 @@ const Navbar = () => {
     { label: 'Lugares', to: '/lugares' },
     { label: 'Episodios', to: '/episodios' },
     { label: 'Sobre Nosotros', to: '/about' },
-    { label: 'FAQ', to: '/faq' },
+    { label: 'Preguntas Frecuentes', to: '/faq' },
   ];
 
   return (
