@@ -35,6 +35,7 @@
   display: flex;
   justify-content: flex-start;
   padding: 2%;
+  margin-top: 2%;
 }
 
 .lugar_main_container {
@@ -89,8 +90,8 @@
   min-height: 100vh;
 }
 
-.container_lugares .div_background-lugares,
-.container_lugares .div_background-blur-lugares {
+.container_lugares .div_background_lugares,
+.container_lugares .div_background_blur_lugares {
   position: fixed;
   top: 0;
   left: 0;
@@ -103,11 +104,11 @@
   background-attachment: fixed;
 }
 
-.container_lugares .div_background-lugares {
+.container_lugares .div_background_lugares {
   z-index: -2;
 }
 
-.container_lugares .div_background-blur-lugares {
+.container_lugares .div_background_blur_lugares {
   z-index: -1;
   filter: blur(10px);
   animation: blurFadeInLugares 0.5s ease-in-out;
@@ -122,17 +123,18 @@
 }
 
 .mostrar_mas_btn {
+  padding: 4%;
   background-color: #2a2a2a;
   color: #8dff85;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-family: Inter, sans-serif;
+  font-weight: 200;
   font-style: italic;
   text-decoration: none;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   width: 100%;
-  transition: 0.5s;
+  margin-top: 0.5rem;
 }
 
 .mostrar_mas_btn:hover {
@@ -171,7 +173,7 @@
   font-weight: 100 900;
   font-style: italic;
 }
-.search-bar-lugares {
+.search_bar_lugares {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -181,7 +183,7 @@
   width: 100%;
 }
 
-.search-input-lugares {
+.search_input_lugares {
   padding: 10px;
   font-size: 0.9rem;
   border-radius: 5px;
@@ -191,8 +193,8 @@
   font-weight: 500;
 }
 
-.type-select,
-.dimension-select {
+.type_select,
+.dimension_select {
   padding: 10px;
   font-size: 0.85rem;
   border-radius: 5px;
@@ -203,13 +205,13 @@
   box-sizing: border-box;
 }
 
-.search-bar-lugares .dimension-select {
+.search_bar_lugares .dimension_select {
   flex: 0 0 280px;
   min-width: 280px;
   max-width: 280px;
   box-sizing: border-box;
 }
-.search-bar-lugares .type-select {
+.search_bar_lugares .type_select {
   flex: 0 0 260px;
   min-width: 260px;
   max-width: 260px;
@@ -245,7 +247,7 @@
     font-size: 1rem;
     text-align: center;
   }
-  .search-bar-lugares {
+  .search_bar_lugares {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -254,16 +256,16 @@
     align-items: center;
   }
 
-  .search-input-lugares {
+  .search_input_lugares {
     width: 80%;
   }
-  .search-bar-lugares .dimension-select {
+  .search_bar_lugares .dimension_select {
     width: 80%;
     flex: none;
     min-width: auto;
     max-width: 400px;
   }
-  .search-bar-lugares .type-select {
+  .search_bar_lugares .type_select {
     width: 80%;
     flex: none;
     min-width: auto;
@@ -274,16 +276,16 @@
     gap: 1rem;
   }
   .lugar_main_container {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
   .mostrar_mas_btn {
-    scale: 0.8;
+    scale: 0.85;
     transition: none;
     background-color: #2a2a2a;
     color: #8dff85;
   }
   .residentes_button {
-    scale: 0.8;
+    scale: 0.85;
   }
   .lista_lugares .mostrar_mas_btn:hover,
   .lugar_main_container .mostrar_mas_btn:hover {

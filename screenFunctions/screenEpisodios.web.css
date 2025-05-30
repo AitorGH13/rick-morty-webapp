@@ -1,7 +1,7 @@
 .title_episodios {
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 4%;
   font-family: 'Inter', sans-serif;
   font-style: italic;
   position: relative;
@@ -22,6 +22,16 @@
     width: 100%;
   }
 }
+.description_episodios {
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0% 4%;
+}
+
 .lista_episodios {
   display: flex;
   flex-direction: row;
@@ -34,7 +44,7 @@
 .episodios_container {
   display: flex;
   justify-content: center;
-  padding: 2rem 2rem;
+  padding: 2%;
 }
 
 .episodio_card {
@@ -47,12 +57,12 @@
   font-family: Inter, sans-serif;
   font-weight: 200;
   font-style: italic;
-  padding: 20px;
+  padding: 1% 2% 3% 2%;
   border: 1px solid #8dff85;
 }
 
 .mostrar_mas_btn {
-  padding: 10px 20px;
+  padding: 4%;
   background-color: #2a2a2a;
   color: #8dff85;
   font-family: Inter, sans-serif;
@@ -77,26 +87,23 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 60px;
+  padding: 0%;
   width: 50%;
-  margin: 0 auto 0 0;
+  margin-left: 5%;
 }
 
-.controls_bar {
+.search_bar_episodios {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: baseline;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 2%;
+  width: 100%;
 }
-
-.search-bar-episodios {
-  margin-top: 20px;
-}
-
 .search-input-episodios {
-  margin-top: 20px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 0.9rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 300px;
@@ -106,11 +113,13 @@
 
 .season-select {
   padding: 10px;
-  font-size: 16px;
+  font-size: 0.85rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-family: Inter, sans-serif;
   font-weight: 500;
+  width: 320px;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -136,7 +145,7 @@
 
 .season-title {
   font-family: Inter, sans-serif;
-  font-size: 1.75rem;
+  font-size: 3rem;
   font-weight: 300;
   font-style: italic;
   color: #8dff85;
@@ -156,13 +165,14 @@
 }
 .screenEpisodios {
   margin: 0;
-  position: relative;
-  width: 100%;
-  height: 100vh;
   background-image: url('/fondo_main_blur.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 .container_episodios {
   position: relative;
@@ -199,5 +209,63 @@
   to {
     opacity: 1;
     filter: blur(10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .header_episodios {
+    width: 100%;
+    margin: 10% 5% 5% 0%;
+  }
+  .screenEpisodios {
+    background-size: 235% auto;
+    background-position: 100% 60%;
+  }
+  .title_episodios {
+    height: 100%;
+    font-size: 2.5rem;
+  }
+  .description_episodios {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .search_bar_episodios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 2%;
+    width: 100%;
+    align-items: center;
+  }
+  .search-input-episodios {
+    width: 80%;
+  }
+  .season-title {
+    font-size: 2rem;
+  }
+  .episodios_container {
+    font-size: 0.85rem;
+  }
+  .episodio_card {
+    flex: 1 1 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+    min-width: calc(50% - 0.5rem);
+  }
+
+  .lista_episodios {
+    gap: 1rem;
+  }
+  .mostrar_mas_btn {
+    scale: 0.85;
+    transition: none;
+    background-color: #2a2a2a;
+    color: #8dff85;
+  }
+  .lista_episodios .mostrar_mas_btn:hover,
+  .episodios_container .mostrar_mas_btn:hover {
+    background-color: #2a2a2a;
+    color: #8dff85;
+    transition: none;
+    transform: none;
   }
 }

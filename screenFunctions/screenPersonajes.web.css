@@ -16,8 +16,8 @@
   min-height: 100vh;
 }
 
-.container_personajes .div_background-personajes,
-.container_personajes .div_background-blur-personajes {
+.container_personajes .div_background_personajes,
+.container_personajes .div_background_blur_personajes {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,11 +30,11 @@
   background-attachment: fixed;
 }
 
-.container_personajes .div_background-personajes {
+.container_personajes .div_background_personajes {
   z-index: -2;
 }
 
-.container_personajes .div_background-blur-personajes {
+.container_personajes .div_background_blur_personajes {
   z-index: -1;
   filter: blur(10px);
   animation: blurFadeInPersonajes 0.5s ease-in-out;
@@ -103,7 +103,7 @@
   padding: 0% 4%;
 }
 
-.search-bar-personajes {
+.search_bar_personajes {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -113,7 +113,7 @@
   width: 100%;
 }
 
-.search-input-personajes {
+.search_input_personajes {
   padding: 10px;
   font-size: 0.9rem;
   border-radius: 5px;
@@ -122,8 +122,8 @@
   font-family: Inter, sans-serif;
   font-weight: 500;
 }
-.select-input-origin,
-.select-input-location {
+.select_input_origin,
+.select_input_location {
   padding: 10px;
   font-size: 0.85rem;
   border-radius: 5px;
@@ -131,10 +131,12 @@
   font-family: Inter, sans-serif;
   font-weight: 500;
   box-sizing: border-box;
+  min-width: 320px;
+  max-width: 320px;
 }
 
-.search-bar-personajes .select-input-origin,
-.search-bar-personajes .select-input-location {
+.search_bar_personajes .select_input_origin,
+.search_bar_personajes .select_input_location {
   flex: 0 0 320px;
   min-width: 320px;
   max-width: 320px;
@@ -197,7 +199,7 @@
 }
 
 @media (max-width: 500px) {
-  .search-bar-personajes {
+  .search_bar_personajes {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -206,12 +208,12 @@
     align-items: center;
   }
 
-  .search-input-personajes {
+  .search_input_personajes {
     width: 80%;
   }
 
-  .search-bar-personajes .select-input-origin,
-  .search-bar-personajes .select-input-location {
+  .search_bar_personajes .select_input_origin,
+  .search_bar_personajes .select_input_location {
     width: 80%;
     flex: none;
     min-width: auto;

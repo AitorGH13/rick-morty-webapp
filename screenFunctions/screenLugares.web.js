@@ -153,8 +153,8 @@ function ScreenLugares() {
   return (
     <div className="screenLugares">
       <div className="container_lugares">
-        <div className="div_background-lugares"></div>
-        <div className="div_background-blur-lugares"></div>
+        <div className="div_background_lugares"></div>
+        <div className="div_background_blur_lugares"></div>
 
         <div className="header_lugares">
           <div className="title_container">
@@ -165,19 +165,19 @@ function ScreenLugares() {
             </p>
           </div>
 
-          <div className="search-bar-lugares">
+          <div className="search_bar_lugares">
             <input
               type="text"
               placeholder="Buscar lugar..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="search-input-lugares"
+              className="search_input_lugares"
             />
 
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="type-select"
+              className="type_select"
             >
               <option value="">— Tipo (todos) —</option>
               {typeOptions
@@ -192,7 +192,7 @@ function ScreenLugares() {
             <select
               value={dimensionFilter}
               onChange={(e) => setDimensionFilter(e.target.value)}
-              className="dimension-select"
+              className="dimension_select"
             >
               <option value="">— Dimensión (todas) —</option>
               {dimensionOptions
