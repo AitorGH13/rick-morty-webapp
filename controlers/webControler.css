@@ -21,7 +21,7 @@
 }
 
 /* Desktop: ≥769px */
-@media (min-width: 769px) {
+@media (min-width: 500px) {
   .navbar {
     display: none;
   }
@@ -31,7 +31,7 @@
 }
 
 /* Tablet/Móvil: ≤768px */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .navbar {
     display: block;
   }

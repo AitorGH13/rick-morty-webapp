@@ -142,8 +142,8 @@ section[class^='carousel-'] {
 /* Móvil ≤480px */
 @media (max-width: 500px) {
   .title_and_quote_container_home {
-    width: 100%;
-    margin: 0;
+    width: 97%;
+    margin: 5% 0 0 1%;
     padding: 0;
     height: 30%;
   }
@@ -168,7 +168,7 @@ section[class^='carousel-'] {
     flex-direction: column;
     justify-content: space-between;
     background-size: 235% auto;
-    background-position: 100% 60%;
+    background-position: 100% 70%;
     height: 100vh;
   }
 
