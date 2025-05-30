@@ -1,7 +1,7 @@
 .title_lugares {
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 4%;
   font-family: 'Inter', sans-serif;
   font-style: italic;
   position: relative;
@@ -34,10 +34,13 @@
 .lugares_container {
   display: flex;
   justify-content: flex-start;
-  padding: 2rem;
+  padding: 2%;
 }
 
 .lugar_main_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   border-radius: 20px;
   background-color: rgb(0, 0, 0, 0.8);
   color: white;
@@ -45,8 +48,9 @@
   font-family: Inter, sans-serif;
   font-weight: 200;
   font-style: italic;
-  padding: 20px;
+  padding: 5% 5%;
   border: 1px solid #8dff85;
+  font-size: 1rem;
 }
 
 .title_container {
@@ -57,33 +61,26 @@
   flex-direction: column;
 }
 
-.title {
-  margin-bottom: 30px;
-  font-weight: 200;
-  font-style: italic;
-  font-size: 80px;
-  color: #8dff85;
-}
-
-.description {
+.description_lugares {
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-style: italic;
-  font-size: 25px;
+  font-size: 1.5rem;
   color: white;
-  max-width: 600px;
   text-align: center;
+  padding: 0% 4%;
 }
 
 .screenLugares {
   margin: 0;
-  position: relative;
-  width: 100%;
-  height: 100vh;
   background-image: url('/fondo_main_blur.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .container_personajes {
@@ -125,7 +122,6 @@
 }
 
 .mostrar_mas_btn {
-  padding: 10px 20px;
   background-color: #2a2a2a;
   color: #8dff85;
   font-family: 'Inter', sans-serif;
@@ -136,12 +132,12 @@
   border: none;
   cursor: pointer;
   width: 100%;
+  transition: 0.5s;
 }
 
 .mostrar_mas_btn:hover {
   background-color: #8dff85;
   color: #0f0f0f;
-  transition: 0.5s;
 }
 
 @keyframes blurFadeIn {
@@ -151,13 +147,15 @@
   }
 }
 
-.header_personajes {
+.header_lugares {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 60px;
+  /*padding: 60px;*/
+  padding: 0%;
   width: 50%;
+  margin-left: 5%;
 }
 
 @font-face {
@@ -179,13 +177,13 @@
   flex-wrap: nowrap;
   align-items: baseline;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 2%;
   width: 100%;
 }
 
 .search-input-lugares {
   padding: 10px;
-  font-size: 16px;
+  font-size: 0.9rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 300px;
@@ -196,7 +194,7 @@
 .type-select,
 .dimension-select {
   padding: 10px;
-  font-size: 14px;
+  font-size: 0.85rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-family: Inter, sans-serif;
@@ -230,8 +228,68 @@
   flex-direction: column;
 }
 
-.lugar_main_container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+@media (max-width: 500px) {
+  .header_lugares {
+    width: 100%;
+    margin: 10% 5% 5% 0%;
+  }
+  .screenLugares {
+    background-size: 235% auto;
+    background-position: 100% 60%;
+  }
+  .title_lugares {
+    height: 100%;
+    font-size: 2.5rem;
+  }
+  .description_lugares {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .search-bar-lugares {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 2%;
+    width: 100%;
+    align-items: center;
+  }
+
+  .search-input-lugares {
+    width: 80%;
+  }
+  .search-bar-lugares .dimension-select {
+    width: 80%;
+    flex: none;
+    min-width: auto;
+    max-width: 400px;
+  }
+  .search-bar-lugares .type-select {
+    width: 80%;
+    flex: none;
+    min-width: auto;
+    max-width: 400px;
+  }
+  .lista_lugares {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  .lugar_main_container {
+    font-size: 0.7rem;
+  }
+  .mostrar_mas_btn {
+    scale: 0.8;
+    transition: none;
+    background-color: #2a2a2a;
+    color: #8dff85;
+  }
+  .residentes_button {
+    scale: 0.8;
+  }
+  .lista_lugares .mostrar_mas_btn:hover,
+  .lugar_main_container .mostrar_mas_btn:hover {
+    background-color: #2a2a2a;
+    color: #8dff85;
+    transition: none;
+    transform: none;
+  }
 }

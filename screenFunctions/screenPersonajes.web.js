@@ -46,7 +46,7 @@ function ScreenPersonajes() {
         <div className="header_personajes">
           <div className="contenedor_titulo">
             <h1 className="titulo_personajes">Personajes</h1>
-            <p className="descripcion">
+            <p className="description_personajes">
               Busca y filtra a tus personajes favoritos de Rick y Morty.
             </p>
           </div>

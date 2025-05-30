@@ -93,13 +93,14 @@
   }
 }
 
-.descripcion {
+.description_personajes {
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-style: italic;
   font-size: 1.5rem;
   color: white;
   text-align: center;
+  padding: 0% 4%;
 }
 
 .search-bar-personajes {
@@ -114,7 +115,7 @@
 
 .search-input-personajes {
   padding: 10px;
-  font-size: 16px;
+  font-size: 0.9rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 300px;
@@ -124,7 +125,7 @@
 .select-input-origin,
 .select-input-location {
   padding: 10px;
-  font-size: 14px;
+  font-size: 0.85rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-family: Inter, sans-serif;
@@ -134,9 +135,9 @@
 
 .search-bar-personajes .select-input-origin,
 .search-bar-personajes .select-input-location {
-  flex: 0 0 280px;
-  min-width: 280px;
-  max-width: 280px;
+  flex: 0 0 320px;
+  min-width: 320px;
+  max-width: 320px;
   box-sizing: border-box;
 }
 
@@ -151,7 +152,7 @@
 .personajes_contenedor {
   display: flex;
   justify-content: flex-start;
-  margin: 3%;
+  margin: 4%;
   flex-direction: column;
 }
 
@@ -220,17 +221,13 @@
     height: 100%;
     font-size: 2.5rem;
   }
-  .descripcion {
+  .description_personajes {
     font-size: 1rem;
     text-align: center;
   }
   .screenPersonajes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-size: 235% auto;
     background-position: 100% 60%;
-    height: 100vh;
   }
   .header_personajes {
     width: 100%;

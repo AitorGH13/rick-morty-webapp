@@ -156,10 +156,10 @@ function ScreenLugares() {
         <div className="div_background-lugares"></div>
         <div className="div_background-blur-lugares"></div>
 
-        <div className="header_personajes">
+        <div className="header_lugares">
           <div className="title_container">
             <h1 className="title_lugares">Lugares</h1>
-            <p className="description">
+            <p className="description_lugares">
               En esta sección podrás encontrar información sobre los diferentes
               lugares de la serie.
             </p>
