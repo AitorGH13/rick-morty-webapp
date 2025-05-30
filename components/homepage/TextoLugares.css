@@ -10,7 +10,7 @@
   font-size: 40px;
   color: white;
 }
-.description_lugares {
+.description_lugares_home {
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-style: italic;
@@ -42,11 +42,11 @@
   font-style: italic;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .texto_header_lugares {
     font-size: 1.5rem;
   }
-  .description_lugares {
+  .description_lugares_home {
     font-size: 1rem;
   }
 }

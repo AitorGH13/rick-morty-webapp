@@ -12,7 +12,7 @@
   font-size: 40px;
   color: white;
 }
-.description_personajes {
+.description_personajes_home {
   width: 100%;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
@@ -45,11 +45,11 @@ green_word:hover {
   font-style: italic;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .texto_header_personajes {
     font-size: 1.5rem;
   }
-  .description_personajes {
+  .description_personajes_home {
     font-size: 1rem;
   }
   .textoSectionPersonajes {

@@ -12,7 +12,7 @@
   color: white;
 }
 
-.description_episodios {
+.description_episodios_home {
   font-family: 'Inter', sans-serif;
   font-weight: 100;
   font-style: italic;
@@ -44,11 +44,11 @@ green_word:hover {
   font-style: italic;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .texto_header_episodios {
     font-size: 1.5rem;
   }
-  .description_episodios {
+  .description_episodios_home {
     font-size: 1rem;
   }
 }
