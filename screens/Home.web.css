@@ -149,7 +149,7 @@ section[class^='carousel-'] {
   }
   .highlight-container {
     width: 90%; /* ocupa casi todo el ancho en móvil */
-    margin: 0 5% 15% 5%;
+    margin: 0 5% 10% 5%;
   }
 
   section[class^='carousel-'] {
@@ -160,7 +160,7 @@ section[class^='carousel-'] {
   }
 
   .highlight-text {
-    height: 8rem;
+    height: 10rem;
     margin-bottom: 0rem;
   }
   .background-test-home {
