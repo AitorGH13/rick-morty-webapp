@@ -51,11 +51,12 @@
   background-image: url('/fondo_main.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain; /* siempre muestra la imagen completa */
+  /*background-size: contain;*/ /* siempre muestra la imagen completa */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  background-size: 100% auto;
 }
 
 /* Título y frase alineados a la izquierda, centrados internamente */
@@ -139,7 +140,7 @@ section[class^='carousel-'] {
 }
 */
 /* Móvil ≤480px */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .title_and_quote_container_home {
     width: 100%;
     margin: 0 0 0 0;

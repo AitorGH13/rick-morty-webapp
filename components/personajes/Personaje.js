@@ -40,19 +40,7 @@ function Personaje({ personaje }) {
           <p>
             <strong>Estado:</strong>{' '}
             <span
-              style={{
-                display: 'inline-block',
-                width: '10px',
-                height: '10px',
-                borderRadius: '50%',
-                backgroundColor:
-                  personaje.status === 'Alive'
-                    ? 'green'
-                    : personaje.status === 'Dead'
-                      ? 'red'
-                      : 'gray',
-                marginRight: '5px',
-              }}
+              className={`status-indicator status-${personaje.status.toLowerCase()}`}
               aria-hidden="true"
             ></span>
             <span>{personaje.status}</span>
