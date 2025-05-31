@@ -28,23 +28,38 @@ npm start
 
 # Secciones
 
+## Inicio
+
+<div align="center">
+    <img src="./assets/RickMorty_Inicio.png" alt="Demo animado" width="800"/>
+</div>
+
 ## Personajes
 
 <div align="center">
-    <img src="./assets/PersonajesCap.png" alt="Demo animado" width="800"/>
-    <img src="assets/PersonajesCap2.png" alt="Demo animado" width="800"/>
+    <img src="./assets/RickMorty_Personajes.png" alt="Demo animado" width="800"/>
 </div>
 
 ## Lugares
 
 <div align="center">
-    <img src="./assets/LugaresCap.png" alt="Demo animado" width="800"/>
-    <img src="assets/LugaresCap2.png" alt="Demo animado" width="800"/>
+    <img src="./assets/RickMorty_Lugares.png" alt="Demo animado" width="800"/>
 </div>
 
 ## Episodios
 
 <div align="center">
-    <img src="./assets/EpisodiosCap.png" alt="Demo animado" width="800"/>
-    <img src="./assets/EpisodiosCap2.png" alt="Demo animado" width="800"/>
+    <img src="assets/RickMorty_Episodios.png" alt="Demo animado" width="800"/>
+</div>
+
+## Sobre nosotros
+
+<div align="center">
+    <img src="assets/RickMorty_SobreNosotros.png" alt="Demo animado" width="800"/>
+</div>
+
+## Preguntas frecuentes
+
+<div align="center">
+    <img src="assets/RickMorty_PreguntasFrecuentes.png" alt="Demo animado" width="800"/>
 </div>

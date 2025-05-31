@@ -22,7 +22,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/icon2.png",
+      "favicon": "./assets/icon.png",
       "build": {
         "babel": {
           "include": ["react-router-dom"],
