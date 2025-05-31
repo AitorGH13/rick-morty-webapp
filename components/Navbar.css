@@ -14,14 +14,7 @@
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo / Título */
-.nav-logo {
-  color: #fff;
-  font-size: 1.5rem;
-  text-decoration: none;
+  justify-content: flex-end;
 }
 
 /* Links Desktop */

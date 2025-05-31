@@ -224,6 +224,7 @@
   .title_episodios {
     height: 100%;
     font-size: 2.5rem;
+    margin-top: 0%;
   }
   .description_episodios {
     font-size: 1rem;
@@ -241,6 +242,7 @@
     width: 80%;
   }
   .season-title {
+    margin-top: 0%;
     font-size: 2rem;
   }
   .episodios_container {

@@ -222,6 +222,7 @@
   .titulo_personajes {
     height: 100%;
     font-size: 2.5rem;
+    margin-top: 0%;
   }
   .description_personajes {
     font-size: 1rem;

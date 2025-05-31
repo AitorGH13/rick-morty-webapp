@@ -17,11 +17,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Logo o título */}
-        <Link to="/" className="nav-logo">
-          Rick & Morty
-        </Link>
-
         {/* Links Desktop */}
         <div className="nav-desktop">
           {sections.map((s) => (

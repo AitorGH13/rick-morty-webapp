@@ -153,7 +153,7 @@ details[open] summary {
     background-position: 100% 70%;
   }
   .title_preguntas_frecuentes {
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 2rem;
   }
   .subtitle_preguntas_frecuentes {
@@ -178,5 +178,9 @@ details[open] summary {
 
   details[open].pregunta_container {
     background-color: rgba(0, 0, 0, 0.7);
+  }
+  .pregunta_container:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: none;
   }
 }

@@ -109,6 +109,7 @@
 @media (max-width: 500px) {
   .container_sobre-nosotros {
     width: 95%;
+    margin-top: 0%;
   }
   .screenSobreNosotros {
     background-size: 235% auto;
@@ -116,7 +117,7 @@
   }
   .title_about {
     font-size: 2.5rem;
-    margin-top: 15%;
+    margin-top: 10%;
   }
   .subtitle_about {
     font-size: 0rem;
