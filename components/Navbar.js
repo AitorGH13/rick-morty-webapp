@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -17,7 +16,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Links Desktop */}
         <div className="nav-desktop">
           {sections.map((s) => (
             <Link key={s.to} to={s.to} className="nav-link">
@@ -26,7 +24,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Botón Hamburger */}
         <button
           className="nav-toggle"
           aria-label="Abrir menú"
@@ -35,7 +32,6 @@ const Navbar = () => {
           <span className={`hamburger ${open ? 'open' : ''}`} />
         </button>
 
-        {/* Menú Mobile */}
         <div className={`nav-mobile ${open ? 'open' : ''}`}>
           {sections.map((s) => (
             <Link

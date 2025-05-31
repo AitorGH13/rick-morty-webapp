@@ -43,7 +43,6 @@
   margin: 0 0 0 -2px;
 }
 
-/* Móvil ≤480px */
 @media (max-width: 500px) {
   .typewriter {
     font-size: 1rem;
