@@ -11,7 +11,7 @@ function TextoPersonajes() {
         </a>{' '}
         favoritos en esta increíble galería!{' '}
       </h3>
-      <p className={'description_personajes'}>
+      <p className={'description_personajes_home'}>
         Explora la vida, habilidades y secretos de los protagonistas que hacen
         de esta historia algo inolvidable. Cada personaje tiene una historia que
         contar, ¿cuál será tu favorito?{' '}

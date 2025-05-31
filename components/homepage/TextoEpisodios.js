@@ -11,7 +11,7 @@ function TextoEpisodios() {
         </a>
         !
       </h3>
-      <p className={'description_episodios'}>
+      <p className={'description_episodios_home'}>
         Sumérgete en cada capítulo y recuerda las escenas más impactantes,
         divertidas o emocionantes. Encuentra tu episodio favorito o descubre
         alguno que aún no hayas visto.{' '}

@@ -19,13 +19,13 @@ function ScreenEpisodios() {
         <div className="header_episodios">
           <div className="title_container">
             <h1 className="title_episodios">Episodios</h1>
-            <p className="description">
+            <p className="description_episodios">
               En esta sección podrás encontrar información sobre los episodios
               de la serie.
             </p>
           </div>
 
-          <div className="controls_bar">
+          <div className="search_bar_episodios">
             <input
               type="text"
               placeholder="Buscar episodio..."

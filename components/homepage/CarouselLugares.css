@@ -1,7 +1,5 @@
 .carousel-lugares {
   width: 42%;
-  margin-left: 5%;
-  gap: 1rem;
 }
 
 .carousel-lugares .swiper-wrapper {
@@ -27,4 +25,10 @@
 .carousel-lugares .swiper-slide-shadow-left,
 .carousel-lugares .swiper-slide-shadow-right {
   display: none;
+}
+
+@media (max-width: 500px) {
+  .carousel-lugares {
+    width: 70%;
+  }
 }

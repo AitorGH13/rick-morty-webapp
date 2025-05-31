@@ -40,32 +40,32 @@ function ScreenPersonajes() {
   return (
     <div className="screenPersonajes">
       <div className="container_personajes">
-        <div className="div_background-personajes" aria-hidden="true" />
-        <div className="div_background-blur-personajes" aria-hidden="true" />
+        <div className="div_background_personajes" aria-hidden="true" />
+        <div className="div_background_blur_personajes" aria-hidden="true" />
 
         <div className="header_personajes">
           <div className="contenedor_titulo">
             <h1 className="titulo_personajes">Personajes</h1>
-            <p className="descripcion">
+            <p className="description_personajes">
               Busca y filtra a tus personajes favoritos de Rick y Morty.
             </p>
           </div>
 
-          <div className="search-bar-personajes">
+          <div className="search_bar_personajes">
             <input
               type="text"
               placeholder="Buscar personaje..."
               name="searchText"
               value={filters.searchText}
               onChange={handleChange}
-              className="search-input-personajes"
+              className="search_input_personajes"
             />
 
             <select
               name="location"
               value={filters.location}
               onChange={handleChange}
-              className="select-input-location"
+              className="select_input_location"
             >
               <option value="">— Localización (todos) —</option>
               {displayLocationOptions.map((loc) => (
@@ -79,7 +79,7 @@ function ScreenPersonajes() {
               name="origin"
               value={filters.origin}
               onChange={handleChange}
-              className="select-input-origin"
+              className="select_input_origin"
             >
               <option value="">— Origen (todos) —</option>
               {displayOriginOptions.map((o) => (

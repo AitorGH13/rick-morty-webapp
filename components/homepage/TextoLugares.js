@@ -11,7 +11,7 @@ function TextoLugares() {
         </a>{' '}
         más icónicos del universo de la serie!{' '}
       </h3>
-      <p className={'description_lugares'}>
+      <p className={'description_lugares_home'}>
         Viaja por escenarios asombrosos, desde reinos lejanos hasta rincones
         ocultos llenos de misterio. Cada lugar tiene su propia atmósfera y
         leyenda, y ahora puedes explorarlos todos desde un solo sitio.{' '}

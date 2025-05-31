@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import MiddelBar from '../components/MiddleBar';
 import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
 
 import Home from '../screens/Home';
 import SobreNosotros from '../screens/SobreNosotros';
@@ -21,6 +22,9 @@ function App() {
   return (
     <Router>
       <div style={{ minHeight: '100vh' }}>
+        {/* Navbar siempre en top */}
+        <Navbar />
+
         <div className="header">
           <MiddelBar toggleSidebar={toggleSidebar} />
           <Sidebar open={openSidebar} toggleSidebar={toggleSidebar} />
@@ -28,14 +32,10 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
-
             <Route path="/about" element={<SobreNosotros />} />
             <Route path="/faq" element={<PreguntasFrecuentes />} />
-
             <Route path="/lugares" element={<ScreenLugares />} />
-
             <Route path="/personajes" element={<ScreenPersonajes />} />
-
             <Route path="/episodios" element={<Episodios />} />
           </Routes>
         </div>
