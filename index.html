@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>ByteMe</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="preload" href="/_expo/static/css/MiddleBar-84b26edcc356ca659fc0af6f5e1ee8c4.css" as="style"><link rel="stylesheet" href="/_expo/static/css/MiddleBar-84b26edcc356ca659fc0af6f5e1ee8c4.css"><link rel="preload" href="/_expo/static/css/Navbar-c1c8a0866588a22b02e404f73c281557.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Navbar-c1c8a0866588a22b02e404f73c281557.css"><link rel="preload" href="/_expo/static/css/aos-f6df738c383b192c790ed5b393ad52fe.css" as="style"><link rel="stylesheet" href="/_expo/static/css/aos-f6df738c383b192c790ed5b393ad52fe.css"><link rel="preload" href="/_expo/static/css/Titulo-d7b0df15eab50048e51650a4e8804da0.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Titulo-d7b0df15eab50048e51650a4e8804da0.css"><link rel="preload" href="/_expo/static/css/Typewriter-18f880eb46ea478367cf924e06441eac.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Typewriter-18f880eb46ea478367cf924e06441eac.css"><link rel="preload" href="/_expo/static/css/Home.web-7c5e16e7d11f208479f130d6e6b5733d.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Home.web-7c5e16e7d11f208479f130d6e6b5733d.css"><link rel="preload" href="/_expo/static/css/swiper-bundle-95704e9772b1a32256a0dd5b8320fd4d.css" as="style"><link rel="stylesheet" href="/_expo/static/css/swiper-bundle-95704e9772b1a32256a0dd5b8320fd4d.css"><link rel="preload" href="/_expo/static/css/CarouselEpisodios-dba6f605735a803bc2c09a1ca4f0aad3.css" as="style"><link rel="stylesheet" href="/_expo/static/css/CarouselEpisodios-dba6f605735a803bc2c09a1ca4f0aad3.css"><link rel="preload" href="/_expo/static/css/CarouselPersonajes-979b371d37fbc9475591c85ddce62925.css" as="style"><link rel="stylesheet" href="/_expo/static/css/CarouselPersonajes-979b371d37fbc9475591c85ddce62925.css"><link rel="preload" href="/_expo/static/css/CarouselLugares-7127bb4b285a2e13d3b9d632e7d76582.css" as="style"><link rel="stylesheet" href="/_expo/static/css/CarouselLugares-7127bb4b285a2e13d3b9d632e7d76582.css"><link rel="preload" href="/_expo/static/css/TextoPersonajes-e07072204f2219e5f9df856077659fd4.css" as="style"><link rel="stylesheet" href="/_expo/static/css/TextoPersonajes-e07072204f2219e5f9df856077659fd4.css"><link rel="preload" href="/_expo/static/css/TextoLugares-b68129109e526d243e0c18b979d07a2c.css" as="style"><link rel="stylesheet" href="/_expo/static/css/TextoLugares-b68129109e526d243e0c18b979d07a2c.css"><link rel="preload" href="/_expo/static/css/TextoEpisodios-634c3bb0529995c1cf9f2588f41fcd1f.css" as="style"><link rel="stylesheet" href="/_expo/static/css/TextoEpisodios-634c3bb0529995c1cf9f2588f41fcd1f.css"><link rel="preload" href="/_expo/static/css/Footer-4a71c4e24164a09eee68be6a152ab209.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Footer-4a71c4e24164a09eee68be6a152ab209.css"><link rel="preload" href="/_expo/static/css/SobreNosotros.web-cb0c7795c2e44ac476350b2b69364ba2.css" as="style"><link rel="stylesheet" href="/_expo/static/css/SobreNosotros.web-cb0c7795c2e44ac476350b2b69364ba2.css"><link rel="preload" href="/_expo/static/css/Integrante.web-4a4c6ffdfb9f5720b2034fc67d322ba1.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Integrante.web-4a4c6ffdfb9f5720b2034fc67d322ba1.css"><link rel="preload" href="/_expo/static/css/PreguntasFrecuentes.web-6f4af3ccfaf0b714df7c8972829ecf8a.css" as="style"><link rel="stylesheet" href="/_expo/static/css/PreguntasFrecuentes.web-6f4af3ccfaf0b714df7c8972829ecf8a.css"><link rel="preload" href="/_expo/static/css/Lugar-d80a4c8fa9edf7b4a546c7e86d4f7448.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Lugar-d80a4c8fa9edf7b4a546c7e86d4f7448.css"><link rel="preload" href="/_expo/static/css/screenLugares.web-baf174e008d747394346005132122bcb.css" as="style"><link rel="stylesheet" href="/_expo/static/css/screenLugares.web-baf174e008d747394346005132122bcb.css"><link rel="preload" href="/_expo/static/css/Personaje-01a2942966df7d9f3199f00a9300b47a.css" as="style"><link rel="stylesheet" href="/_expo/static/css/Personaje-01a2942966df7d9f3199f00a9300b47a.css"><link rel="preload" href="/_expo/static/css/screenPersonajes.web-0d8ab6336d27bdcb2ef5b95f6d5b90f8.css" as="style"><link rel="stylesheet" href="/_expo/static/css/screenPersonajes.web-0d8ab6336d27bdcb2ef5b95f6d5b90f8.css"><link rel="preload" href="/_expo/static/css/screenEpisodios.web-546d61ef8aa1facb5aca8c09f87b6dda.css" as="style"><link rel="stylesheet" href="/_expo/static/css/screenEpisodios.web-546d61ef8aa1facb5aca8c09f87b6dda.css"><link rel="preload" href="/_expo/static/css/webController-298382d09a8f6571106f7c90fe64d205.css" as="style"><link rel="stylesheet" href="/_expo/static/css/webController-298382d09a8f6571106f7c90fe64d205.css"><link rel="shortcut icon" href="/favicon.ico" /></head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/_expo/static/js/web/index-94d37d39481b2ae7db0ed461c5bd98cb.js" defer></script>
+</body>
+</html>
