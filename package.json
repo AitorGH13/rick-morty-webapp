@@ -12,8 +12,8 @@
     "web": "expo start --web",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "build:web": "expo export --platform web",
-    "deploy": "gh-pages --nojekyll -d dist"
+    "build:web": "expo build:web --no-interactive",
+    "deploy": "gh-pages --nojekyll -d web-build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
