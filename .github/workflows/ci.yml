@@ -31,7 +31,6 @@ jobs:
       - name: Run Prettier check
         run: npx prettier --check .
 
-
   build-and-deploy:
     name: Build & Deploy to GitHub Pages
     needs: lint
