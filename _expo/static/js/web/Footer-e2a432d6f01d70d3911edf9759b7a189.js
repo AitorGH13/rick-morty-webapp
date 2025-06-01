@@ -1,0 +1,2 @@
+__d((function(g,r,i,a,m,e,d){var o=r(d[0]);Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;o(r(d[1]));r(d[2]);var s=r(d[3]);e.default=()=>{const o=(new Date).getFullYear();return(0,s.jsxs)("footer",{className:"simple-footer",children:["\xa9 ",o," ByteMe. Todos los derechos reservados."]})}}),1242,[1,17,1249,130]);
+__d((function(g,r,i,a,m,e,d){}),1249,[]);
