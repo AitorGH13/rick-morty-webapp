@@ -12,6 +12,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "experiments": {
+      "baseUrl": "/rick-morty-webapp"
+    },
     "ios": {
       "supportsTablet": true
     },
