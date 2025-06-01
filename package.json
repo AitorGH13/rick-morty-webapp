@@ -12,7 +12,7 @@
     "web": "expo start --web",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "build:web": "expo build:web --no-interactive",
+    "build:web": "expo export:web",
     "deploy": "gh-pages --nojekyll -d web-build"
   },
   "dependencies": {
