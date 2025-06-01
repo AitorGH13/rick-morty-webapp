@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import MiddelBar from '../components/MiddleBar';
 import Sidebar from '../components/Sidebar';
@@ -13,7 +13,7 @@ import ScreenLugares from '../screenFunctions/screenLugares';
 import ScreenPersonajes from '../screenFunctions/screenPersonajes';
 import Episodios from '../screenFunctions/screenEpisodios';
 
-import './webControler.css';
+import './webController.css';
 
 function App() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -22,7 +22,6 @@ function App() {
   return (
     <Router>
       <div style={{ minHeight: '100vh' }}>
-        {/* Navbar siempre en top */}
         <Navbar />
 
         <div className="header">

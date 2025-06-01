@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Platform } from 'react-native';
 
-const WebControler = React.lazy(() => import('./controlers/webControler'));
+const WebControler = React.lazy(() => import('./controllers/webController'));
 
 function Controlers() {
   if (Platform.OS !== 'web') return null;
