@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <!-- For GitHub Pages, todas las rutas se interpretarán relativas al directorio actual -->
-  <base href="./">
+  <!-- Ahora apuntamos directamente a la subruta de GitHub Pages -->
+  <base href="/rick-morty-webapp/">
   <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
   <title>ByteMe</title>
-  <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+  <!-- El reset recomendado por react-native-web para ocupar el 100% de la pantalla -->
   <style id="expo-reset">
-      /* These styles make the body full-height */
       html,
       body {
           height: 100%;
       }
-      /* These styles disable body scrolling if you are using <ScrollView> */
+
       body {
           overflow: hidden;
       }
-      /* These styles make the root element full-height */
+
       #root {
           display: flex;
           height: 100%;
@@ -29,7 +28,8 @@
       }
   </style>
 
-  <!-- Aquí hemos quitado la “/” inicial y, con <base href="./">, funcionan como rutas relativas -->
+  <!-- Ahora todas las rutas deberían resolverse a:
+       https://aitorgh13.github.io/rick-morty-webapp/_expo/static/css/… -->
   <link
     rel="preload"
     href="_expo/static/css/MiddleBar-84b26edcc356ca659fc0af6f5e1ee8c4.css"
@@ -264,12 +264,14 @@
 </head>
 
 <body>
-<!-- Use static rendering with Expo Router to support running without JavaScript. -->
 <noscript>You need to enable JavaScript to run this app.</noscript>
-<!-- The root element for your Expo app. -->
 <div id="root"></div>
 
-<!-- Al quitar la “/” inicial, el navegador cargará este archivo desde _expo/static/js/... -->
-<script src="_expo/static/js/web/index-94d37d39481b2ae7db0ed461c5bd98cb.js" defer></script>
+<!-- Elimina la “/” inicial para que el navegador busque en:
+     https://aitorgh13.github.io/rick-morty-webapp/_expo/static/js/... -->
+<script
+  src="_expo/static/js/web/index-94d37d39481b2ae7db0ed461c5bd98cb.js"
+  defer
+></script>
 </body>
 </html>
