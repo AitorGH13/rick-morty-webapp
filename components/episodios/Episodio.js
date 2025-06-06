@@ -9,12 +9,39 @@ function Episodio({ name, air_date, episode, characters }) {
 
   useEffect(() => {
     const fetchPersonajes = async () => {
+      if (!characters.length) {
+        setCargando(false);
+        return;
+      }
+
+      // Extraer IDs de cada URL de personaje
+      const ids = characters
+        .map((url) => {
+          const partes = url.split('/');
+          return partes[partes.length - 1];
+        })
+        .filter((id) => !!id)
+        .join(',');
+
+      // Hacer una sola petición para todos los IDs
+      const unicaUrl = `https://rickandmortyapi.com/api/character/[${ids}]`;
+
       try {
-        const respuestas = await Promise.all(
-          characters.map((url) => fetch(url))
-        );
-        const datos = await Promise.all(respuestas.map((res) => res.json()));
-        setNombresPersonajes(datos.map((p) => p.name));
+        const res = await fetch(unicaUrl);
+        if (res.status === 429) {
+          console.error(
+            'Rate limit (429) en única llamada. Intenta de nuevo más tarde.'
+          );
+          setCargando(false);
+          return;
+        }
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        const datos = await res.json();
+        // Si viene un solo personaje, la respuesta es un objeto; si hay varios, es un array
+        const personajesArray = Array.isArray(datos) ? datos : [datos];
+        setNombresPersonajes(personajesArray.map((p) => p.name));
       } catch (err) {
         console.error('Error cargando personajes:', err);
       } finally {
@@ -22,8 +49,7 @@ function Episodio({ name, air_date, episode, characters }) {
       }
     };
 
-    if (characters.length) fetchPersonajes();
-    else setCargando(false);
+    fetchPersonajes();
   }, [characters]);
 
   const mostrados = mostrarTodos
@@ -42,7 +68,6 @@ function Episodio({ name, air_date, episode, characters }) {
 
       <div className="personajes_section">
         <h4 id="personajes-heading">Personajes:</h4>
-
         <div aria-live="polite">
           {cargando ? (
             <p>Cargando personajes…</p>
