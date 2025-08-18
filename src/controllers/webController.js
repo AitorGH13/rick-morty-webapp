@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -24,8 +24,13 @@ function App() {
   const [openSidebar, setOpenSidebar] = useState(false);
   const toggleSidebar = () => setOpenSidebar((o) => !o);
 
+  const isGhPages =
+    typeof window !== 'undefined' &&
+    window.location.hostname.includes('github.io');
+  const basename = isGhPages ? '/rick-morty-webapp' : '/';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div style={{ minHeight: '100vh' }}>
         <Navbar />
 
