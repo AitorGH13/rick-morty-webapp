@@ -36,6 +36,8 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build web bundle (npm script)
+        env:
+          EXPO_PUBLIC_URL: https://aitorgh13.github.io/rick-morty-webapp
         run: npm run build:web
 
       - name: Disable Jekyll on Pages
