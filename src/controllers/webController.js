@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 
 import MiddelBar from '../components/MiddleBar';
 import Sidebar from '../components/Sidebar';
@@ -30,12 +35,14 @@ function App() {
         </div>
         <div>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/index" element={<Home />} />
+            <Route path="/" element={<Navigate to="/index" replace />} />
             <Route path="/about" element={<SobreNosotros />} />
             <Route path="/faq" element={<PreguntasFrecuentes />} />
             <Route path="/lugares" element={<ScreenLugares />} />
             <Route path="/personajes" element={<ScreenPersonajes />} />
             <Route path="/episodios" element={<Episodios />} />
+            <Route path="*" element={<Navigate to="/index" replace />} />
           </Routes>
         </div>
       </div>

@@ -7,7 +7,7 @@ function MiddleBar() {
     <div className={'main_container'}>
       <div className="header-wrapper">
         <div className="navbar-links">
-          <Link to="/" className="navbar-link">
+          <Link to="/index" className="navbar-link">
             Inicio
           </Link>
           <Link to="/personajes" className="navbar-link">

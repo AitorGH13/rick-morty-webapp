@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const sections = [
-    { label: 'Inicio', to: '/' },
+    { label: 'Inicio', to: '/index' },
     { label: 'Personajes', to: '/personajes' },
     { label: 'Lugares', to: '/lugares' },
     { label: 'Episodios', to: '/episodios' },
