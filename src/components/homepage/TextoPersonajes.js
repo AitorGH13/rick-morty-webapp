@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/TextoPersonajes.css';
 
 function TextoPersonajes() {
@@ -6,9 +7,9 @@ function TextoPersonajes() {
     <div className="textoSectionPersonajes">
       <h3 className={'texto_header_personajes'}>
         ¡Conoce a tus{' '}
-        <a className={'green_word'} href={'/personajes'}>
+        <Link className={'green_word'} to={'/personajes'}>
           personajes
-        </a>{' '}
+        </Link>{' '}
         favoritos en esta increíble galería!{' '}
       </h3>
       <p className={'description_personajes_home'}>

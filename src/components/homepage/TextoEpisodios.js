@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/TextoEpisodios.css';
 
 function TextoEpisodios() {
@@ -6,9 +7,9 @@ function TextoEpisodios() {
     <div className="textoSectionEpisodios">
       <h3 className={'texto_header_episodios'}>
         ¡Revive los mejores momentos a través de los{' '}
-        <a className={'green_word'} href={'/episodios'}>
+        <Link className={'green_word'} to={'/episodios'}>
           episodios
-        </a>
+        </Link>
         !
       </h3>
       <p className={'description_episodios_home'}>

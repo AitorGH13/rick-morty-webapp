@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/TextoLugares.css';
 
 function TextoLugares() {
@@ -6,9 +7,9 @@ function TextoLugares() {
     <div className="textoSectionLugares">
       <h3 className={'texto_header_lugares'}>
         ¡Descubre los{' '}
-        <a className={'green_word'} href={'/lugares'}>
+        <Link className={'green_word'} to={'/lugares'}>
           lugares
-        </a>{' '}
+        </Link>{' '}
         más icónicos del universo de la serie!{' '}
       </h3>
       <p className={'description_lugares_home'}>
