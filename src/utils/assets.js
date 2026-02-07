@@ -1,5 +1,6 @@
 import Constants from 'expo-constants';
 
+// Uses the configured baseUrl (Expo experiments) so exported assets work under the GitHub Pages subpath.
 const basePath = Constants?.expoConfig?.experiments?.baseUrl || '';
 
 export const assetPath = (relativePath) => `${basePath}${relativePath}`;

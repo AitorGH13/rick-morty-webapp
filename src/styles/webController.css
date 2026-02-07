@@ -6,6 +6,7 @@
 }
 
 :root {
+  /* Fallbacks; applyAssetBase() overwrites these at runtime with prefixed URLs. */
   --asset-bg-main: url(/images/fondo_main.jpg);
   --asset-bg-main-blur: url(/images/fondo_main_blur.jpg);
   --asset-portal: url(/images/portal-rick-and-morty.gif);
