@@ -19,7 +19,7 @@ const images = [
   // …
 ].map(assetPath);
 
-export default function CarouselPersonajes() {
+export default function CarouselLugares() {
   return (
     <div className="carousel-lugares">
       <Swiper
