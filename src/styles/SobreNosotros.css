@@ -1,0 +1,129 @@
+.screenSobreNosotros {
+  margin: 0;
+  background-image: url('/images/fondo_main_blur.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.title_about {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  position: relative;
+  color: #8dff85;
+  width: fit-content;
+}
+
+.title_about::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 4px;
+  background-color: #8dff85;
+  animation: underlineAboutGrow 0.8s ease-out forwards;
+}
+
+@keyframes underlineAboutGrow {
+  to {
+    width: 100%;
+  }
+}
+
+.subtitle_about {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2%;
+  font-family: 'Inter', sans-serif;
+  color: #8dff85;
+}
+
+.text_about {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 2%;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.text_destacado {
+  font-weight: 700;
+}
+
+.link_faq {
+  color: #8dff85;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container_sobre-nosotros {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 2% 2% 2% 4%;
+  margin-top: 0;
+  width: 60%;
+}
+
+.container_sobre-nosotros .div_background-sobre-nosotros,
+.container_sobre-nosotros .div_background-blur-sobre-nosotros {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b2b2b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container_sobre-nosotros .div_background-sobre-nosotros {
+  z-index: -2;
+}
+
+.container_sobre-nosotros .div_background-blur-sobre-nosotros {
+  z-index: -1;
+  filter: blur(10px);
+  animation: blurFadeInSobreNosotros 0.5s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes blurFadeInSobreNosotros {
+  to {
+    opacity: 1;
+    filter: blur(10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .container_sobre-nosotros {
+    width: 95%;
+    margin-top: 0%;
+  }
+  .screenSobreNosotros {
+    background-size: 235% auto;
+    background-position: 100% 70%;
+  }
+  .title_about {
+    font-size: 2.5rem;
+    margin-top: 10%;
+  }
+  .subtitle_about {
+    font-size: 0rem;
+  }
+
+  .text_about {
+    font-size: 1rem;
+  }
+}
