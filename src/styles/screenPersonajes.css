@@ -1,0 +1,242 @@
+.screenPersonajes {
+  margin: 0;
+  background-image: url('/images/fondo_main_blur.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.container_personajes {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container_personajes .div_background_personajes,
+.container_personajes .div_background_blur_personajes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b2b2b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container_personajes .div_background_personajes {
+  z-index: -2;
+}
+
+.container_personajes .div_background_blur_personajes {
+  z-index: -1;
+  filter: blur(10px);
+  animation: blurFadeInPersonajes 0.5s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes blurFadeInPersonajes {
+  to {
+    opacity: 1;
+    filter: blur(10px);
+  }
+}
+
+.header_personajes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*padding: 60px;*/
+  padding: 0%;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.contenedor_titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.titulo_personajes {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  position: relative;
+  color: #8dff85;
+}
+
+.titulo_personajes::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 4px;
+  background-color: #8dff85;
+  animation: underlinePersonajesGrow 0.8s ease-out forwards;
+}
+
+@keyframes underlinePersonajesGrow {
+  to {
+    width: 100%;
+  }
+}
+
+.description_personajes {
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0% 4%;
+}
+
+.search_bar_personajes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.search_input_personajes {
+  padding: 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+}
+.select_input_origin,
+.select_input_location {
+  padding: 10px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 320px;
+}
+
+.search_bar_personajes .select_input_origin,
+.search_bar_personajes .select_input_location {
+  flex: 0 0 320px;
+  min-width: 320px;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+.lista_personajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+.personajes_contenedor {
+  display: flex;
+  justify-content: flex-start;
+  margin: 4%;
+  flex-direction: column;
+}
+
+.carta_personaje {
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  font-family: Inter, sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  padding: 5%;
+  border: 1px solid #8dff85;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+
+.personaje_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.personaje_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@media (max-width: 500px) {
+  .search_bar_personajes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 2%;
+    width: 100%;
+    align-items: center;
+  }
+
+  .search_input_personajes {
+    width: 80%;
+  }
+
+  .search_bar_personajes .select_input_origin,
+  .search_bar_personajes .select_input_location {
+    width: 80%;
+    flex: none;
+    min-width: auto;
+    max-width: 400px;
+  }
+  .titulo_personajes {
+    height: 100%;
+    font-size: 2.5rem;
+    margin-top: 0%;
+  }
+  .description_personajes {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .screenPersonajes {
+    background-size: 235% auto;
+    background-position: 100% 70%;
+  }
+  .header_personajes {
+    width: 100%;
+    margin: 10% 5% 5% 0%;
+  }
+  .lista_personajes {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
