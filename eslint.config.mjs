@@ -1,4 +1,3 @@
-// eslint.config.js
 import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -9,7 +8,6 @@ import prettierConfig from 'eslint-config-prettier';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  // ==== 1) JS/TS (+ React + Prettier) ====
   {
     // Sólo aplica en estos ficheros:
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
@@ -37,7 +35,6 @@ export default defineConfig([
     ],
   },
 
-  // ==== 2) CSS ====
   {
     files: ['**/*.css'],
     plugins: { css },
