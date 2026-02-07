@@ -1,6 +1,6 @@
 .screenPreguntasFrecuentes {
   margin: 0;
-  background-image: url('/images/fondo_main_blur.jpg');
+  background-image: var(--asset-bg-main-blur);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;

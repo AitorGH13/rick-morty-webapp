@@ -3,6 +3,7 @@ import { Autoplay, EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/CarouselLugares.css';
+import { assetPath } from '../../utils/assets';
 
 const images = [
   '/images/carousel/lugares/Anatomy_Park.webp',
@@ -16,9 +17,9 @@ const images = [
   '/images/carousel/lugares/Multiverse.webp',
   '/images/carousel/lugares/Licencia.webp',
   // …
-];
+].map(assetPath);
 
-export default function CarouselPersonajes() {
+export default function CarouselLugares() {
   return (
     <div className="carousel-lugares">
       <Swiper

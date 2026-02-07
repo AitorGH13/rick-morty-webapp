@@ -32,18 +32,20 @@ green_word:hover {
   font-weight: bolder;
 }
 
+/* eslint-disable css/no-invalid-at-rules */
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
+  src: var(--asset-font-inter-src);
   font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
+  src: var(--asset-font-inter-italic-src);
   font-weight: 100 900;
   font-style: italic;
 }
+/* eslint-enable css/no-invalid-at-rules */
 
 @media (max-width: 500px) {
   .texto_header_personajes {

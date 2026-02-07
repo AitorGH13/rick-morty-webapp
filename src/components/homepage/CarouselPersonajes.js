@@ -3,6 +3,7 @@ import { Autoplay, EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/CarouselPersonajes.css';
+import { assetPath } from '../../utils/assets';
 
 const images = [
   '/images/carousel/personajes/Rick2.webp',
@@ -18,7 +19,7 @@ const images = [
   '/images/carousel/personajes/Unidad.webp',
   '/images/carousel/personajes/Max.webp',
   // …
-];
+].map(assetPath);
 
 export default function CarouselPersonajes() {
   return (
