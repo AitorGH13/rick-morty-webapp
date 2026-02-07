@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Episodio from './Episodio';
 import { fetchAllEpisodes } from '../../api/episodes';
+import { assetPath } from '../../utils/assets';
 
 export default function MostrarEpisodios({ search, season }) {
   const [episodios, setEpisodios] = useState([]);
@@ -145,7 +146,10 @@ export default function MostrarEpisodios({ search, season }) {
   if (loading) {
     return (
       <div className="loading-container">
-        <img src="/images/portal-rick-and-morty.gif" alt="Cargando" />
+        <img
+          src={assetPath('/images/portal-rick-and-morty.gif')}
+          alt="Cargando"
+        />
       </div>
     );
   }

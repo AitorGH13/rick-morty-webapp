@@ -33,7 +33,7 @@
   content: '';
   display: inline-block;
   position: relative;
-  background-image: url('/images/portal-rick-and-morty.gif');
+  background-image: var(--asset-portal);
   background-size: cover;
   background-repeat: no-repeat;
   visibility: visible;

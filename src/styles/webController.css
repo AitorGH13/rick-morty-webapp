@@ -4,6 +4,15 @@
   background-color: #548458;
   width: 100%;
 }
+
+:root {
+  --asset-bg-main: url(/images/fondo_main.jpg);
+  --asset-bg-main-blur: url(/images/fondo_main_blur.jpg);
+  --asset-portal: url(/images/portal-rick-and-morty.gif);
+  --asset-font-inter-src: url(/fonts/Inter-VariableFont.ttf) format('truetype');
+  --asset-font-inter-italic-src: url(/fonts/Inter-Italic-VariableFont.ttf)
+    format('truetype');
+}
 .header {
   background-color: #2b2b2b;
   display: flex;

@@ -8,7 +8,7 @@
 }
 
 .background-test-home {
-  background-image: url('/images/fondo_main.jpg');
+  background-image: var(--asset-bg-main);
   background-position: center;
   background-repeat: no-repeat;
   display: flex;

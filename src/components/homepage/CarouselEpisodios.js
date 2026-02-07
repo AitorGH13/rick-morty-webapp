@@ -3,6 +3,7 @@ import { Autoplay, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/CarouselEpisodios.css';
+import { assetPath } from '../../utils/assets';
 
 const images = [
   '/images/carousel/episodios/1.webp',
@@ -20,7 +21,7 @@ const images = [
   '/images/carousel/episodios/15.webp',
   '/images/carousel/episodios/16.webp',
   // …
-];
+].map(assetPath);
 
 export default function CarouselEpisodios() {
   return (

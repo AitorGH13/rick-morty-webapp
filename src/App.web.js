@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { applyAssetBase } from './utils/assets';
 
 import MiddelBar from './components/layout/MiddleBar';
 import Sidebar from './components/layout/Sidebar';
@@ -18,6 +19,10 @@ import './styles/webController.css';
 function App() {
   const [openSidebar, setOpenSidebar] = useState(false);
   const toggleSidebar = () => setOpenSidebar((o) => !o);
+
+  useEffect(() => {
+    applyAssetBase();
+  }, []);
 
   return (
     <Router>

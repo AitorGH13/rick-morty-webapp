@@ -74,7 +74,7 @@
 
 .screenLugares {
   margin: 0;
-  background-image: url('/images/fondo_main_blur.jpg');
+  background-image: var(--asset-bg-main-blur);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -160,19 +160,21 @@
   margin-left: 5%;
 }
 
+/* eslint-disable css/no-invalid-at-rules */
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
+  src: var(--asset-font-inter-src);
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
+  src: var(--asset-font-inter-italic-src);
   font-weight: 100 900;
   font-style: italic;
 }
+/* eslint-enable css/no-invalid-at-rules */
 .search_bar_lugares {
   display: flex;
   flex-direction: row;

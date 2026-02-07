@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Lugar from './Lugar';
+import { assetPath } from '../../utils/assets';
 
 function Lugares({
   lugares,
@@ -48,7 +49,10 @@ function Lugares({
   if (loading && lugares.length === 0) {
     return (
       <div>
-        <img src="/images/portal-rick-and-morty.gif" alt="loading_image" />
+        <img
+          src={assetPath('/images/portal-rick-and-morty.gif')}
+          alt="loading_image"
+        />
       </div>
     );
   }

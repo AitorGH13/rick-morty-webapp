@@ -7,10 +7,11 @@ import {
   fetchCharactersWithSearch,
   BASE_URL,
 } from '../../api/characters';
+import { assetPath } from '../../utils/assets';
 
 function Personajes({ filters, setOriginOptions, setLocationOptions }) {
   const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [nextPage, setNextPage] = useState(null);
   const [showNoResults, setShowNoResults] = useState(false);
   const [allCharacters, setAllCharacters] = useState([]);
@@ -191,7 +192,10 @@ function Personajes({ filters, setOriginOptions, setLocationOptions }) {
       </div>
       {loading && (
         <div className="loading-container">
-          <img src="/images/portal-rick-and-morty.gif" alt="Cargando" />
+          <img
+            src={assetPath('/images/portal-rick-and-morty.gif')}
+            alt="Cargando"
+          />
         </div>
       )}
     </div>
