@@ -145,7 +145,10 @@ export default function MostrarEpisodios({ search, season }) {
   if (loading) {
     return (
       <div className="loading-container">
-        <img src="/images/portal-rick-and-morty.gif" alt="Cargando" />
+        <img
+          src="/rick-morty-webapp/images/portal-rick-and-morty.gif"
+          alt="Cargando"
+        />
       </div>
     );
   }

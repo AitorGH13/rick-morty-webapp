@@ -4,19 +4,21 @@ import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/CarouselPersonajes.css';
 
+const BASE_PATH = '/rick-morty-webapp';
+
 const images = [
-  '/images/carousel/personajes/Rick2.webp',
-  '/images/carousel/personajes/AbradolphLincler.webp',
-  '/images/carousel/personajes/Hamurai.webp',
-  '/images/carousel/personajes/MrMeeseeks.webp',
-  '/images/carousel/personajes/ScaryTerry.webp',
-  '/images/carousel/personajes/ThePresident.webp',
-  '/images/carousel/personajes/Lawnmower_dog.webp',
-  '/images/carousel/personajes/Rick.webp',
-  '/images/carousel/personajes/TheDevil.webp',
-  '/images/carousel/personajes/Tinkles.webp',
-  '/images/carousel/personajes/Unidad.webp',
-  '/images/carousel/personajes/Max.webp',
+  `${BASE_PATH}/images/carousel/personajes/Rick2.webp`,
+  `${BASE_PATH}/images/carousel/personajes/AbradolphLincler.webp`,
+  `${BASE_PATH}/images/carousel/personajes/Hamurai.webp`,
+  `${BASE_PATH}/images/carousel/personajes/MrMeeseeks.webp`,
+  `${BASE_PATH}/images/carousel/personajes/ScaryTerry.webp`,
+  `${BASE_PATH}/images/carousel/personajes/ThePresident.webp`,
+  `${BASE_PATH}/images/carousel/personajes/Lawnmower_dog.webp`,
+  `${BASE_PATH}/images/carousel/personajes/Rick.webp`,
+  `${BASE_PATH}/images/carousel/personajes/TheDevil.webp`,
+  `${BASE_PATH}/images/carousel/personajes/Tinkles.webp`,
+  `${BASE_PATH}/images/carousel/personajes/Unidad.webp`,
+  `${BASE_PATH}/images/carousel/personajes/Max.webp`,
   // …
 ];
 

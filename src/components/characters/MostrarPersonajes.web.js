@@ -191,7 +191,10 @@ function Personajes({ filters, setOriginOptions, setLocationOptions }) {
       </div>
       {loading && (
         <div className="loading-container">
-          <img src="/images/portal-rick-and-morty.gif" alt="Cargando" />
+          <img
+            src="/rick-morty-webapp/images/portal-rick-and-morty.gif"
+            alt="Cargando"
+          />
         </div>
       )}
     </div>

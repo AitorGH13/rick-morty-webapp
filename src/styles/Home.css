@@ -8,7 +8,7 @@
 }
 
 .background-test-home {
-  background-image: url('/images/fondo_main.jpg');
+  background-image: url('/rick-morty-webapp/images/fondo_main.jpg');
   background-position: center;
   background-repeat: no-repeat;
   display: flex;

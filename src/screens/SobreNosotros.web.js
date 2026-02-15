@@ -7,7 +7,7 @@ function SobreNosotros() {
     apellidos: 'Arraras Torres',
     descripcion:
       'Estudiante de Ingeniería Informática en la UPNA de 4to año. Apasionado de la ciberseguridad y el desarrollo.',
-    foto: '/images/aitor.png',
+    foto: '/rick-morty-webapp/images/aitor.png',
     correo: 'arraras.139286@e.unavarra.es',
   };
   const ruben = {
@@ -15,7 +15,7 @@ function SobreNosotros() {
     apellidos: 'Zubasti Aristu',
     descripcion:
       'Estudiante de Ingeniería Informática en la UPNA de 3er año. Apasionado por el software y el desarrollo web.',
-    foto: '/images/ruben.jpeg',
+    foto: '/rick-morty-webapp/images/ruben.jpeg',
     correo: 'zubasti.153989@e.unavarra.es',
   };
   const aritz = {
@@ -23,7 +23,7 @@ function SobreNosotros() {
     apellidos: 'Huarte Urriza',
     descripcion:
       'Estudiante de Ingeniería Informática en la UPNA de 4to año y apicultor.',
-    foto: '/images/aritz.jpg',
+    foto: '/rick-morty-webapp/images/aritz.jpg',
     correo: 'huarte.147017@e.unavarra.es',
   };
   const paula = {
@@ -31,7 +31,7 @@ function SobreNosotros() {
     apellidos: 'Ruiz de Gopegui Rubio',
     descripcion:
       'Estudiante de Ingeniería Informática en la UPNA de 4to año. Apasionada por el desarrollo web y software.',
-    foto: '/images/paula.jpg',
+    foto: '/rick-morty-webapp/images/paula.jpg',
     correo: 'ruizdegopegui.148800@e.unavarra.es',
   };
   return (

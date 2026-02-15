@@ -1,10 +1,12 @@
+import { fetchWithRetry } from './fetchWithRetry';
+
 const BASE_URL = 'https://rickandmortyapi.com/api/character';
 
 export async function fetchAllCharacters() {
   const allChars = [];
   let url = BASE_URL;
   while (url) {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url);
     const data = await res.json();
     allChars.push(...data.results);
     url = data.info.next;
@@ -13,7 +15,7 @@ export async function fetchAllCharacters() {
 }
 
 export async function fetchCharactersPage(url) {
-  const res = await fetch(url);
+  const res = await fetchWithRetry(url);
   return res.json();
 }
 
@@ -22,7 +24,7 @@ export async function fetchCharactersWithSearch(searchText) {
   const result = [];
   let current = url;
   while (current) {
-    const res = await fetch(current);
+    const res = await fetchWithRetry(current);
     const data = await res.json();
     result.push(...data.results);
     current = data.info.next;
@@ -33,7 +35,7 @@ export async function fetchCharactersWithSearch(searchText) {
 export async function bulkFetchCharacterNames(urls) {
   if (!urls.length) return [];
   const ids = urls.map((u) => u.split('/').pop()).join(',');
-  const res = await fetch(`${BASE_URL}/[${ids}]`);
+  const res = await fetchWithRetry(`${BASE_URL}/[${ids}]`);
   const data = await res.json();
   return Array.isArray(data) ? data.map((p) => p.name) : [data.name];
 }
@@ -42,7 +44,7 @@ export async function fetchCharactersByOrigin(originName) {
   let url = BASE_URL;
   const names = [];
   while (url) {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url);
     const data = await res.json();
     const matching = data.results
       .filter((p) => p.origin.name === originName)
