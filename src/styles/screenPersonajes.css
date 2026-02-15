@@ -193,7 +193,8 @@
 }
 @font-face {
   font-family: 'Inter';
-  src: url('/rick-morty-webapp/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
+  src: url('/rick-morty-webapp/fonts/Inter-Italic-VariableFont.ttf')
+    format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }
