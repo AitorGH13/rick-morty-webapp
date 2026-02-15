@@ -48,7 +48,10 @@ function Lugares({
   if (loading && lugares.length === 0) {
     return (
       <div>
-        <img src="/images/portal-rick-and-morty.gif" alt="loading_image" />
+        <img
+          src="/rick-morty-webapp/images/portal-rick-and-morty.gif"
+          alt="loading_image"
+        />
       </div>
     );
   }

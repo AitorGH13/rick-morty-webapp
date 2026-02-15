@@ -1,3 +1,5 @@
+import { fetchWithRetry } from './fetchWithRetry';
+
 const BASE_URL = 'https://rickandmortyapi.com/api/location';
 
 export async function fetchLocationsPage(page, search, type, dimension) {
@@ -6,7 +8,7 @@ export async function fetchLocationsPage(page, search, type, dimension) {
   if (type) params.push(`type=${encodeURIComponent(type)}`);
   if (dimension) params.push(`dimension=${encodeURIComponent(dimension)}`);
   const url = `${BASE_URL}/?${params.join('&')}`;
-  const res = await fetch(url);
+  const res = await fetchWithRetry(url);
   return res.json();
 }
 
@@ -17,7 +19,7 @@ export async function fetchAllLocationFilters() {
   const relations = [];
 
   while (url) {
-    const res = await fetch(url);
+    const res = await fetchWithRetry(url);
     const data = await res.json();
     data.results.forEach((loc) => {
       types.push(loc.type);
@@ -31,7 +33,9 @@ export async function fetchAllLocationFilters() {
 }
 
 export async function fetchLocationByName(name) {
-  const res = await fetch(`${BASE_URL}?name=${encodeURIComponent(name)}`);
+  const res = await fetchWithRetry(
+    `${BASE_URL}?name=${encodeURIComponent(name)}`
+  );
   return res.json();
 }
 

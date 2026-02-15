@@ -4,21 +4,23 @@ import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import 'swiper/swiper-bundle.css';
 import '../../styles/CarouselEpisodios.css';
 
+const BASE_PATH = '/rick-morty-webapp';
+
 const images = [
-  '/images/carousel/episodios/1.webp',
-  '/images/carousel/episodios/2.webp',
-  '/images/carousel/episodios/4.webp',
-  '/images/carousel/episodios/5.webp',
-  '/images/carousel/episodios/6.webp',
-  '/images/carousel/episodios/8.webp',
-  '/images/carousel/episodios/9.webp',
-  '/images/carousel/episodios/10.webp',
-  '/images/carousel/episodios/11.webp',
-  '/images/carousel/episodios/12.webp',
-  '/images/carousel/episodios/13.webp',
-  '/images/carousel/episodios/14.webp',
-  '/images/carousel/episodios/15.webp',
-  '/images/carousel/episodios/16.webp',
+  `${BASE_PATH}/images/carousel/episodios/1.webp`,
+  `${BASE_PATH}/images/carousel/episodios/2.webp`,
+  `${BASE_PATH}/images/carousel/episodios/4.webp`,
+  `${BASE_PATH}/images/carousel/episodios/5.webp`,
+  `${BASE_PATH}/images/carousel/episodios/6.webp`,
+  `${BASE_PATH}/images/carousel/episodios/8.webp`,
+  `${BASE_PATH}/images/carousel/episodios/9.webp`,
+  `${BASE_PATH}/images/carousel/episodios/10.webp`,
+  `${BASE_PATH}/images/carousel/episodios/11.webp`,
+  `${BASE_PATH}/images/carousel/episodios/12.webp`,
+  `${BASE_PATH}/images/carousel/episodios/13.webp`,
+  `${BASE_PATH}/images/carousel/episodios/14.webp`,
+  `${BASE_PATH}/images/carousel/episodios/15.webp`,
+  `${BASE_PATH}/images/carousel/episodios/16.webp`,
   // …
 ];
 

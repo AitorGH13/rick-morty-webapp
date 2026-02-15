@@ -25,6 +25,7 @@ export default defineConfig([
     rules: {
       // activa reglas de Prettier como errores
       ...pluginPrettier.configs.recommended.rules,
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
       'react/react-in-jsx-scope': 'off',
     },
     extends: [

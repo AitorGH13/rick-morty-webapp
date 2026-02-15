@@ -1,6 +1,6 @@
 .screenPersonajes {
   margin: 0;
-  background-image: url('/images/fondo_main_blur.jpg');
+  background-image: url('/rick-morty-webapp/images/fondo_main_blur.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -187,13 +187,13 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont.ttf') format('truetype');
+  src: url('/rick-morty-webapp/fonts/Inter-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
+  src: url('/rick-morty-webapp/fonts/Inter-Italic-VariableFont.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
 }
